@@ -133,6 +133,7 @@ function paragraph_field_widget_form(&$form, &$form_state, $field, $instance, $l
         '#type' => 'textfield',
         '#title' => t("Title"),
         '#default_value' => $defaults['title'],
+        //'#required' => $instance['settings']['required_title'],
       );
       if ($instance['settings']['allow_accordion']) {
         $element['in_accordion'] = array(
