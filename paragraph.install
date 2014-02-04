@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_field_schema().
+ */
+function paragraph_field_schema($field) {
+  switch ($field['type']) {
+
+    case 'paragraph':
+      return array(
+        'columns' => array(
+          'title' => array(
+            'type'     => 'text',
+            'size'     => 'big',
+            'not null' => false,
+          ),
+          'value' => array(
+            'type'     => 'text',
+            'size'     => 'small',
+            'not null' => false,
+          ),
+          'format' => array(
+            'type'     => 'varchar',
+            'length'   => 255,
+            'not null' => false,
+          ),
+          'in_accordion' => array(
+            'type'     => 'int',
+            'not null' => false,
+            'default'  => 0,
+          ),
+        ),
+        'indexes' => array(),
+        'foreign keys' => array(
+          'format' => array(
+            'table'   => 'filter_format',
+            'columns' => array('format' => 'format'),
+          ),
+        ),
+      );
+  }
+}

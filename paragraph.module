@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Paragraph module.
+ */
+
+/**
+ * Sad Drupal is sad.
+ */
+require_once __DIR__ . '/paragraph.field.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function paragraph_theme() {
+  return array(
+    'paragraph' => array(
+      'template' => 'paragraph',
+      'variables' => array(
+        'item' => array(),
+        'langcode' => LANGUAGE_NONE,
+        'entity_type' => null,
+        'bundle' => null,
+        'field_name' => null,
+      ),
+      'file' => 'paragraph.field.inc',
+    ),
+  );
+}
