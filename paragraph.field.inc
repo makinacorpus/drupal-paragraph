@@ -91,7 +91,7 @@ function paragraph_field_formatter_view($entity_type, $entity, $field, $instance
 
   switch ($display['type']) {
 
-    case PARAGRAPH_FIELD:
+    case 'paragraph':
       list(,,$bundle) = entity_extract_ids($entity_type, $entity);
       foreach ($items as $delta => $item) {
         $element[$delta] = array(
