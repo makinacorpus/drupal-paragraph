@@ -176,8 +176,6 @@ function template_preprocess_paragraph(&$variables) {
   }
   if ($variables['entity_type']) {
     $variables['theme_hook_suggestions'][] = 'paragraph__' . $variables['entity_type'];
-  }
-  if ($variables['entity_type']) {
     if ($variables['field_name']) {
       $variables['theme_hook_suggestions'][] = 'paragraph__' . $variables['entity_type'] . '__' . $variables['field_name'];
     }
