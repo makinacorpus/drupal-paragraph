@@ -11,12 +11,12 @@ function paragraph_field_schema($field) {
         'columns' => array(
           'title' => array(
             'type'     => 'text',
-            'size'     => 'big',
+            'size'     => 'small',
             'not null' => false,
           ),
           'value' => array(
             'type'     => 'text',
-            'size'     => 'small',
+            'size'     => 'big',
             'not null' => false,
           ),
           'format' => array(
